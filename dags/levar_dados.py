@@ -40,6 +40,7 @@ file_sensor_task = PythonSensor(
         poke_interval=10,
         timeout=600,
         mode='poke',
+        dag=dag
     )
 
 # Task 2: lê o Excel e envia dados via XCom
@@ -69,35 +70,73 @@ get_data_task = PythonOperator(
         task_id='get_data_task',
         python_callable=process_excel,
         provide_context=True,
+        dag=dag
     )
 
     
     # Criação da tabela
-create_table_dl = """ create table if not exist preco_combustivel(
-PRECO_COMBUSTIVEL_ID INT IDENTITY (1,1) PRIMARY KEY,
-DATA INICIAL date, 
-DATA FINAL date, 
-ESTADO text, 
-MUNICÍPIO text, 
-PRODUTO text,
-NÚMERO DE POSTOS PESQUISADOS int,
-UNIDADE DE MEDIDA text,
-PREÇO MÉDIO REVENDA real, 
-DESVIO PADRÃO REVENDA real,
-PREÇO MÍNIMO REVENDA real,
-PREÇO MÁXIMO REVENDA real,
-COEF DE VARIAÇÃO REVENDA real,
-DATA_PROCESSAMENTO timestamp)
+create_table_dl = """ CREATE TABLE IF NOT EXISTS preco_combustivel (
+    preco_combustivel_id SERIAL PRIMARY KEY,
+    data_inicial DATE, 
+    data_final DATE, 
+    estado TEXT, 
+    municipio TEXT, 
+    produto TEXT,
+    numero_de_postos_pesquisados INT,
+    unidade_de_medida TEXT,
+    preco_medio_revenda REAL, 
+    desvio_padrao_revenda REAL,
+    preco_minimo_revenda REAL,
+    preco_maximo_revenda REAL,
+    coef_de_variacao_revenda REAL,
+    data_processamento TIMESTAMP)
 """
 create_table_task = PostgresOperator(task_id='create_table_task',
                                      postgres_conn_id='postgres',
-                                     sql=create_table_dl
-                                     dag=dag,
+                                     sql=create_table_dl,
+                                     dag=dag
                                      )
 
 
-    
+
+insert_sql = """ 
+INSERT INTO preco_combustivel (
+    data_inicial, 
+    data_final, 
+    estado, 
+    municipio, 
+    produto,
+    numero_de_postos_pesquisados,
+    unidade_de_medida,
+    preco_medio_revenda, 
+    desvio_padrao_revenda,
+    preco_minimo_revenda,
+    preco_maximo_revenda,
+    coef_de_variacao_revenda,
+    data_processamento
+)
+VALUES (
+    '{{ ti.xcom_pull(key="DATA INICIAL") }}',
+    '{{ ti.xcom_pull(key="DATA FINAL") }}',
+    '{{ ti.xcom_pull(key="ESTADO") }}',
+    '{{ ti.xcom_pull(key="MUNICÍPIO") }}',
+    '{{ ti.xcom_pull(key="PRODUTO") }}',
+    '{{ ti.xcom_pull(key="NÚMERO DE POSTOS PESQUISADOS") }}',
+    '{{ ti.xcom_pull(key="UNIDADE DE MEDIDA") }}',
+    '{{ ti.xcom_pull(key="PREÇO MÉDIO REVENDA") }}',
+    '{{ ti.xcom_pull(key="DESVIO PADRÃO REVENDA") }}',
+    '{{ ti.xcom_pull(key="PREÇO MÍNIMO REVENDA") }}',
+    '{{ ti.xcom_pull(key="PREÇO MÁXIMO REVENDA") }}',
+    '{{ ti.xcom_pull(key="COEF DE VARIAÇÃO REVENDA") }}',
+    CURRENT_TIMESTAMP
+);
+"""
+
+insert_data_task = PostgresOperator(task_id='insert_data_task',
+                                    postgres_conn_id ='postgres',
+                                    sql=insert_sql,
+                                    dag=dag)
     
     
     # Encadeamento
-    #file_sensor_task >> get_data_task
+file_sensor_task >> get_data_task >> create_table_task >> insert_data_task
