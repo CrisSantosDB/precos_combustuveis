@@ -19,8 +19,8 @@ dag = DAG(
     description='Essa DAG baixa semanalmente os preços de combustíveis da ANP',
     default_args=default_args,
     catchup=False,
-    schedule_interval='0 0 * * 6',  # Executa todo sábado à meia-noite
-    start_date=datetime(2024, 1, 1)  # Evita execução retroativa
+    schedule_interval='0 8 * * 1',  
+    start_date=datetime(2025, 1, 1)  # Evita execução retroativa
 )
 
 # Função para baixar o arquivo
@@ -47,14 +47,14 @@ def download_excel(**context):
         if response.status_code == 200:
             with open(file_name, 'wb') as f:
                 f.write(response.content)
-            print(f"✅ Arquivo baixado: {file_name}")
+            print(f"Arquivo baixado: {file_name}")
             # Retorna o caminho via XCom para a próxima task
             context['ti'].xcom_push(key='caminho_arquivo', value=file_name)
             return
         else:
-            print(f"❌ Falha ao baixar o arquivo {url}, tentando a semana anterior...")
+            print(f"Falha ao baixar o arquivo {url}, tentando a semana anterior...")
 
-    print("⚠️ Nenhum arquivo encontrado nas últimas semanas.")
+    print("Nenhum arquivo encontrado nas últimas semanas.")
     context['ti'].xcom_push(key='caminho_arquivo', value=None)
 
 # Função para limpar e salvar a aba "CAPITAIS"
@@ -64,7 +64,7 @@ def limpa_tabela(ti):
         try:
             # Abre o arquivo Excel e lê a aba 'CAPITAIS'
             df = pd.read_excel(caminho_arquivo, sheet_name='CAPITAIS', skiprows=9, engine='openpyxl')
-            print("📊 Primeiras linhas da planilha tratada:")
+            print("Primeiras linhas da planilha tratada:")
             print(df.head())
 
             # Converte as colunas de data para formato de string sem hora
@@ -75,11 +75,11 @@ def limpa_tabela(ti):
             with pd.ExcelWriter(caminho_arquivo, engine='openpyxl') as writer:
                 df.to_excel(writer, sheet_name='CAPITAIS', index=False)
 
-            print(f"✅ Planilha 'CAPITAIS' salva com sucesso em: {caminho_arquivo}")
+            print(f"Planilha 'CAPITAIS' salva com sucesso em: {caminho_arquivo}")
         except Exception as e:
-            print(f"❌ Erro ao processar o arquivo: {e}")
+            print(f"Erro ao processar o arquivo: {e}")
     else:
-        print("⚠️ Nenhum arquivo para processar.")
+        print("Nenhum arquivo para processar.")
 
 # Task de download
 download_task = PythonOperator(
