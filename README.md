@@ -1,6 +1,11 @@
 
 # ⛽ Automatizando os dados da ANP com Airflow
 
+<p align="center">
+  <img src="https://github.com/CrisSantosDB/precos_combustuveis/blob/main/projeto_airflow.png?raw=true" width="500"/>
+</p>
+
+
 Toda semana, a ANP publica uma planilha com os preços dos combustíveis. Eu criei esse projeto pra automatizar esse processo usando o Apache Airflow com Astro CLI.
 
 A ideia é simples:
@@ -13,9 +18,6 @@ A ideia é simples:
 
 Esse projeto me ajudou a aprender mais sobre **orquestração de pipelines** e como trabalhar com **dados reais direto da fonte**.
 
-<p align="center">
-  <img src="https://github.com/CrisSantosDB/precos_combustuveis/blob/main/projeto_airflow.png?raw=true" width="500"/>
-</p>
 
 
 
