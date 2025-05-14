@@ -1,6 +1,3 @@
-<p align="center">
-  <img src="https://github.com/CrisSantosDB/precos_combustuveis/blob/main/projeto_airflow.png?raw=true" width="500"/>
-</p>
 
 # ⛽ Automatizando os dados da ANP com Airflow
 
@@ -15,6 +12,10 @@ A ideia é simples:
 📌 Comecei focando só na aba de **capitais**, que já traz uma boa visão geral. As outras abas ainda não estão no pipeline, mas posso adicionar depois conforme a necessidade.
 
 Esse projeto me ajudou a aprender mais sobre **orquestração de pipelines** e como trabalhar com **dados reais direto da fonte**.
+
+<p align="center">
+  <img src="https://github.com/CrisSantosDB/precos_combustuveis/blob/main/projeto_airflow.png?raw=true" width="500"/>
+</p>
 
 
 
