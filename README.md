@@ -1,5 +1,6 @@
-
-                         # ⛽ Automatizando os dados da ANP com Airflow
+<p align="center">
+# ⛽ Automatizando os dados da ANP com Airflow
+</p>
 
 <p align="center">
   <img src="https://github.com/CrisSantosDB/precos_combustuveis/blob/main/projeto_airflow.png?raw=true" width="500"/>
