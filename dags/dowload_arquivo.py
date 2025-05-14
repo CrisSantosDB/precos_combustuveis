@@ -20,7 +20,7 @@ dag = DAG(
     default_args=default_args,
     catchup=False,
     schedule_interval='0 8 * * 1',  
-    start_date=datetime(2025, 1, 1)  # Evita execução retroativa
+    start_date=datetime(2025, 1, 1) 
 )
 
 # Função para baixar o arquivo
