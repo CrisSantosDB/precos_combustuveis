@@ -24,8 +24,8 @@ dag = DAG(
     description='Essa DAG leva os dados de preços de combustíveis da ANP para o Postgres',
     default_args=default_args,
     catchup=False,
-    schedule_interval='10 0 * * 6',  # Todo sábado às 00:10
-    start_date=datetime(2024, 1, 1),
+    schedule_interval='10 8 * * 1',  
+    start_date=datetime(2025, 1, 1)
 )
 
 # Sensor: espera por arquivo Excel
