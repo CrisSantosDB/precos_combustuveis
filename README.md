@@ -6,6 +6,12 @@
 </p>
 
 
+<p align="center">
+  <img src="https://github.com/CrisSantosDB/precos_combustuveis/blob/main/powerbi.jpg" width="500"/>
+</p>
+
+
+
 # Análise de Preços de Combustíveis - Pipeline Automatizado
 
 Este é um projeto pessoal de Engenharia de Dados que automatiza a coleta, tratamento e armazenamento dos dados semanais de preços de combustíveis publicados pela **Agência Nacional do Petróleo (ANP)**.
@@ -33,10 +39,6 @@ Os preços dos combustíveis no Brasil sofrem variações constantes, impactando
 2. Dag inserir_dados.py **Cria tabela e carga dos dados limpos** no banco de dados PostgreSQL  
 
 
-
-<p align="center">
-  <img src="https://github.com/CrisSantosDB/precos_combustuveis/blob/main/powerbi.jpg" width="500"/>
-</p>
 
 
 
