@@ -35,11 +35,10 @@ Os preços dos combustíveis no Brasil sofrem variações constantes, impactando
 1. **Download automático** da planilha semanal publicada pela ANP  
 2. **Tratamento dos dados** com scripts em Python, focando inicialmente na aba de capitais  
 3. **Carga dos dados limpos** no banco de dados PostgreSQL  
-4. (Opcional) Visualização no Power BI para análise e apresentação dos resultados
+
 
 ---
 
-## Estrutura do projeto
 
 
 
