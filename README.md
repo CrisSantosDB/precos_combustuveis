@@ -1,6 +1,3 @@
-<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-  <h1 style="font-size: 48px;">⛽ Automatizando os dados da ANP com Airflow</h1>
-</div>
 
 
 
