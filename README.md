@@ -20,6 +20,16 @@ Os preços dos combustíveis no Brasil sofrem variações constantes, impactando
   <img src="https://raw.githubusercontent.com/CrisSantosDB/precos_combustuveis/main/powerbi.jpg" width="500"/>
 </p>
 
+## 📊 Análise dos Preços de Revenda
+
+Ao analisar os preços médios de revenda nas últimas quatro semanas, cheguei a alguns insights interessantes a partir dos dados tratados:
+
+### 🔎 Principais descobertas:
+
+- 📈 **GLP (gás de cozinha)** apresenta um **desvio padrão de R$ 713,48** e um **coeficiente de variação de 646,30%**.  
+  Isso indica que ele oscila proporcionalmente muito mais do que os demais combustíveis (gasolina, etanol e diesel).
+
+- 🗺️ **Roraima, Amazonas e Tocantins** estão entre os estados com os **maiores preços de revenda**, destacando diferenças regionais significativas no custo dos combustíveis.
 
 
 ---
