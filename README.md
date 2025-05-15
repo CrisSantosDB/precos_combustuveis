@@ -26,7 +26,7 @@ Os preços dos combustíveis no Brasil sofrem variações constantes, impactando
 - **Apache Airflow (com Astro CLI):** Orquestração do pipeline de dados para automação do processo semanal  
 - **Python:** Tratamento e limpeza dos dados brutos  
 - **PostgreSQL:** Banco de dados relacional para armazenar os dados tratados  
-- **Power BI:** Visualização simples para apresentar insights (não foco principal, apenas para entrega de valor)
+- **Power BI:** Visualização simples para apresentar insights 
 
 ---
 
