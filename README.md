@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/CrisSantosDB/precos_combustuveis/blob/main/projeto_preco_combustivel.png" width="500"/>
+  <img src="https://github.com/CrisSantosDB/precos_combustuveis/blob/main/projeto_preco_combustivel.png" width="800"/>
 </p>
 
 
@@ -48,6 +48,10 @@ Ao analisar os preços médios de revenda nas últimas quatro semanas, cheguei a
   Isso indica que ele oscila proporcionalmente muito mais do que os demais combustíveis (gasolina, etanol e diesel).
 
 - 🗺️ **Roraima, Amazonas e Tocantins** estão entre os estados com os **maiores preços de revenda**, destacando diferenças regionais significativas no custo dos combustíveis.
+
+  ### 📷 Visualizações
+
+*As visualizações abaixo foram geradas para ilustrar os dados processados pelo pipeline:*
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/CrisSantosDB/precos_combustuveis/main/visualizacao.png" width="800"/>
