@@ -54,7 +54,7 @@ Ao analisar os preços médios de revenda nas últimas quatro semanas, cheguei a
 *As visualizações abaixo foram geradas para ilustrar os dados processados pelo pipeline:*
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/CrisSantosDB/precos_combustuveis/main/visualizacao.png" width="800"/>
+  <img src="https://raw.githubusercontent.com/CrisSantosDB/precos_combustuveis/main/visualizacao.png" width="1000"/>
 </p>
 
 ---
