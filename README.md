@@ -36,11 +36,7 @@ Os preços dos combustíveis no Brasil sofrem variações constantes, impactando
 ---
 ### 🔍 Visualização no Power BI
 
-<p align="center">
-  <img src="https://raw.github.com/CrisSantosDB/precos_combustuveis/blob/main/visualizacao.png" width="500"/>
-</p>
 
-https://raw.github.com/CrisSantosDB/precos_combustuveis/blob/main/visualizacao.png
 
 ## 📊 Análise dos Preços de Revenda
 
@@ -52,6 +48,10 @@ Ao analisar os preços médios de revenda nas últimas quatro semanas, cheguei a
   Isso indica que ele oscila proporcionalmente muito mais do que os demais combustíveis (gasolina, etanol e diesel).
 
 - 🗺️ **Roraima, Amazonas e Tocantins** estão entre os estados com os **maiores preços de revenda**, destacando diferenças regionais significativas no custo dos combustíveis.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/CrisSantosDB/precos_combustuveis/main/visualizacao.png" width="800"/>
+</p>
 
 ---
 
