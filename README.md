@@ -1,9 +1,7 @@
 
 
 
-<p align="center">
-  <img src="https://github.com/CrisSantosDB/precos_combustuveis/blob/main/projeto_preco_combustivel.png" width="500"/>
-</p>
+
 
 
 <p align="center">
