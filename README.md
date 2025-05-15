@@ -14,6 +14,12 @@ Este é um projeto pessoal de Engenharia de Dados que automatiza a coleta, trata
 
 Os preços dos combustíveis no Brasil sofrem variações constantes, impactando o bolso do consumidor e a logística das empresas. Este projeto tem como objetivo construir um pipeline de dados automatizado para facilitar a análise dessas variações e gerar insights relevantes a partir de dados públicos oficiais.
 
+<p align="center">
+  <img src="https://github.com/CrisSantosDB/precos_combustuveis/blob/main/projeto_preco_combustivel.png" width="500"/>
+</p>
+
+
+
 ---
 
 ## Tecnologias usadas
