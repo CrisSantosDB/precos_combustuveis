@@ -34,7 +34,7 @@ Os preços dos combustíveis no Brasil sofrem variações constantes, impactando
 3. Agendamento via DAG no Apache Airflow
 
 ---
-### 🔍 Visualização no Power BI
+
 
 
 
@@ -49,7 +49,7 @@ Ao analisar os preços médios de revenda nas últimas quatro semanas, cheguei a
 
 - 🗺️ **Roraima, Amazonas e Tocantins** estão entre os estados com os **maiores preços de revenda**, destacando diferenças regionais significativas no custo dos combustíveis.
 
-  ### 📷 Visualizações
+### 🔍 Visualização no Power BI
 
 *As visualizações abaixo foram geradas para ilustrar os dados processados pelo pipeline:*
 
