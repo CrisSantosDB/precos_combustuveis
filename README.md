@@ -33,11 +33,11 @@ Os preços dos combustíveis no Brasil sofrem variações constantes, impactando
 2. Dag inserir_dados.py **Cria tabela e carga dos dados limpos** no banco de dados PostgreSQL  
 
 
----
+
 <p align="center">
   <img src="https://github.com/CrisSantosDB/precos_combustuveis/blob/main/powerbi.png" width="500"/>
 </p>
-https://github.com/CrisSantosDB/precos_combustuveis/blob/main/powerbi.png
+
 
 
 
