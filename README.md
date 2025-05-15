@@ -9,17 +9,38 @@
 </p>
 
 
-Toda semana, a ANP publica uma planilha com os preços dos combustíveis. Eu criei esse projeto pra automatizar esse processo usando o Apache Airflow com Astro CLI.
+# Análise de Preços de Combustíveis - Pipeline Automatizado
 
-A ideia é simples:
+Este é um projeto pessoal de Engenharia de Dados que automatiza a coleta, tratamento e armazenamento dos dados semanais de preços de combustíveis publicados pela **Agência Nacional do Petróleo (ANP)**.
 
-- Faço o download automático do arquivo
-- Trato os dados com Python
-- E carrego tudo no banco de dados PostgreSQL
+---
 
-📌 Comecei focando só na aba de **capitais**, que já traz uma boa visão geral. As outras abas ainda não estão no pipeline, mas posso adicionar depois conforme a necessidade.
+## Motivação
 
-Esse projeto me ajudou a aprender mais sobre **orquestração de pipelines** e como trabalhar com **dados reais direto da fonte**.
+Os preços dos combustíveis no Brasil sofrem variações constantes, impactando o bolso do consumidor e a logística das empresas. Este projeto tem como objetivo construir um pipeline de dados automatizado para facilitar a análise dessas variações e gerar insights relevantes a partir de dados públicos oficiais.
+
+---
+
+## Tecnologias usadas
+
+- **Apache Airflow (com Astro CLI):** Orquestração do pipeline de dados para automação do processo semanal  
+- **Python:** Tratamento e limpeza dos dados brutos  
+- **PostgreSQL:** Banco de dados relacional para armazenar os dados tratados  
+- **Power BI:** Visualização simples para apresentar insights (não foco principal, apenas para entrega de valor)
+
+---
+
+## Como funciona o pipeline
+
+1. **Download automático** da planilha semanal publicada pela ANP  
+2. **Tratamento dos dados** com scripts em Python, focando inicialmente na aba de capitais  
+3. **Carga dos dados limpos** no banco de dados PostgreSQL  
+4. (Opcional) Visualização no Power BI para análise e apresentação dos resultados
+
+---
+
+## Estrutura do projeto
+
 
 
 
