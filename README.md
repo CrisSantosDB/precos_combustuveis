@@ -4,14 +4,6 @@
 
 
 
-
-
-<p align="center">
-  <img src="https://github.com/CrisSantosDB/precos_combustuveis/blob/main/powerbi.jpg" width="500"/>
-</p>
-
-
-
 # Análise de Preços de Combustíveis - Pipeline Automatizado
 
 Este é um projeto pessoal de Engenharia de Dados que automatiza a coleta, tratamento e armazenamento dos dados semanais de preços de combustíveis publicados pela **Agência Nacional do Petróleo (ANP)**.
