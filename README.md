@@ -32,9 +32,8 @@ Os preços dos combustíveis no Brasil sofrem variações constantes, impactando
 
 ## Como funciona o pipeline
 
-1. **Download automático** da planilha semanal publicada pela ANP  
-2. **Tratamento dos dados** com scripts em Python, focando inicialmente na aba de capitais  
-3. **Carga dos dados limpos** no banco de dados PostgreSQL  
+1. Dag dowload_arquivo.py para **Download automático** da planilha semanal publicada pela ANP  e  **Tratamento dos dados*  
+2. Dag inserir_dados.py **Cria tabela e carga dos dados limpos** no banco de dados PostgreSQL  
 
 
 ---
