@@ -14,6 +14,26 @@ Este é um projeto pessoal de Engenharia de Dados que automatiza a coleta, trata
 
 Os preços dos combustíveis no Brasil sofrem variações constantes, impactando o bolso do consumidor e a logística das empresas. Este projeto tem como objetivo construir um pipeline de dados automatizado para facilitar a análise dessas variações e gerar insights relevantes a partir de dados públicos oficiais.
 
+
+
+---
+
+## Tecnologias usadas
+
+- **Apache Airflow (com Astro CLI):** Orquestração do pipeline de dados para automação do processo semanal  
+- **Python:** Tratamento e limpeza dos dados brutos  
+- **PostgreSQL:** Banco de dados relacional para armazenar os dados tratados  
+- **Power BI:** Visualização simples para apresentar insights 
+
+---
+
+## Como funciona o pipeline
+
+1. Dag dowload_arquivo.py para **Download automático** da planilha semanal publicada pela ANP  e  **Tratamento dos dados** 
+2. Dag inserir_dados.py **Cria tabela e carga dos dados limpos** no banco de dados PostgreSQL
+3. Agendamento via DAG no Apache Airflow
+
+---
 ### 🔍 Visualização no Power BI
 
 <p align="center">
@@ -31,22 +51,9 @@ Ao analisar os preços médios de revenda nas últimas quatro semanas, cheguei a
 
 - 🗺️ **Roraima, Amazonas e Tocantins** estão entre os estados com os **maiores preços de revenda**, destacando diferenças regionais significativas no custo dos combustíveis.
 
-
 ---
 
-## Tecnologias usadas
 
-- **Apache Airflow (com Astro CLI):** Orquestração do pipeline de dados para automação do processo semanal  
-- **Python:** Tratamento e limpeza dos dados brutos  
-- **PostgreSQL:** Banco de dados relacional para armazenar os dados tratados  
-- **Power BI:** Visualização simples para apresentar insights 
-
----
-
-## Como funciona o pipeline
-
-1. Dag dowload_arquivo.py para **Download automático** da planilha semanal publicada pela ANP  e  **Tratamento dos dados** 
-2. Dag inserir_dados.py **Cria tabela e carga dos dados limpos** no banco de dados PostgreSQL  
 
 
 
