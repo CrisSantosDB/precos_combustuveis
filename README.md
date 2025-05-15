@@ -37,8 +37,10 @@ Os preços dos combustíveis no Brasil sofrem variações constantes, impactando
 ### 🔍 Visualização no Power BI
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/CrisSantosDB/precos_combustuveis/main/powerbi.jpg" width="500"/>
+  <img src="https://raw.github.com/CrisSantosDB/precos_combustuveis/blob/main/visualizacao.png" width="500"/>
 </p>
+
+https://raw.github.com/CrisSantosDB/precos_combustuveis/blob/main/visualizacao.png
 
 ## 📊 Análise dos Preços de Revenda
 
