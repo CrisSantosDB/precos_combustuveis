@@ -61,6 +61,24 @@ Ao analisar os preços médios de revenda nas últimas quatro semanas, cheguei a
 </p>
 
 ---
+## ⚙️ Ambiente e Versões
+
+- **Astro CLI:** 1.25.0  
+- **Astro Runtime:** 12.9.0  
+  - **Apache Airflow:** 2.10.5+astro.2  
+  - **Python:** 3.12.10
+
+
+## 🧪 Como executar o projeto
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/CrisSantosDB/precos_combustuveis.git
+cd precos_combustuveis
+
+
+
 
 
 
