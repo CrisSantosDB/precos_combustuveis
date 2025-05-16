@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/CrisSantosDB/precos_combustuveis/main/projeto_preco_combustivel.png" width="500"/>
+  <img src="https://raw.githubusercontent.com/CrisSantosDB/precos_combustuveis/main/projeto_preco_combustivel.png" width="800"/>
 </p>
 
 
